@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+.for_pdf {
+  display: none;
+}
+.print_header{
+  display: none;
+}
+.details_page{
+  display: none;
+}
+
+
+.export_button{
+  outline: none;
+  border: none;
+  border: 2px solid rgb(225, 225, 225);
+  color: #23262f;
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-right: 1.5rem
+  
+}
+@media print {
+  .print_header, .pdf_footer {
+    display: block;
+    position: fixed;
+  }
+  
+  .pdf_footer {
+      bottom: 0;
+  }
+}
+.export_names{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  padding: 2rem;
+}
+.export_inside{
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+}
+@media print {
+  body{
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
+  .export_names{
+    display: none;
+  } 
+  @page {
+    margin-left: 0.5in;
+    margin-right: 0.5in;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .page_footer{
+    position: absolute;
+    bottom: 0px;
+  }
+  .details_page{
+      position: relative;
+      float: none;
+      break-before:always;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 40px;
+      text-align: center;
+      padding: 0 100px;
+
+      color: #000000;
+  }
+
+  .for_pdf {
+    float: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    gap: 30px;
+    break-inside: avoid;
+
+
+    .first_page {
+      float: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+
+      .logo_container {
+        display: flex;
+        justify-content: center;
+
+        img {
+          max-width: 30%;
+        }
+      }
+
+      .sample_aircrafts {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+
+        .sample_aircraft {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+
+          .image_container {
+            position: relative;
+
+            img {
+              object-fit: cover;
+              width: 220px;
+              height: auto;
+              border-radius: 15px;
+            }
+          }
+
+          .aircraft_name {
+            font-size: 1.2em;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    .second_page {
+      position: relative;
+      float: none;
+      break-after:always;
+      break-before:always;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Poppins', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 40px;
+      text-align: center;
+      padding: 0 100px;
+
+      color: #000000;
+
+    }
+  }
+}
+
+.pdf_window{
+  top: 50%;
+  left: 50%;
+  // margin-top: -300px;
+  // margin-left: -150px;
+  position: absolute;
+  transform: translateX(-50%);
+  z-index: 50;
+  width: 600px;
+  height: 300px;
+  background-color: white;
+  box-shadow: 5px 5px 20px  black;
+  padding-left: 1rem;  
+}
+
+
+.pdf_export_button{
+  outline: none;
+  border: none;
+  border: 2px solid rgb(225, 225, 225);
+  color: #23262f;
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #f7f7f7;
+  }
+}
+@media print{
+  .pdf_window{
+    display: none;
+  }
+}

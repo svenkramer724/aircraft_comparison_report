@@ -1,0 +1,962 @@
+.slider_home {
+  padding: 50px;
+}
+
+// key facts
+.main_key_facts {
+  display: flex;
+  text-align: center;
+
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+
+  .facts {
+    flex: 1;
+    text-align: left !important;
+  }
+
+  .single_image {
+    margin-bottom: 1rem;
+  }
+
+  .img_container {
+    flex: 1;
+    margin-left: 2rem;
+    padding-bottom: 0.5rem;
+
+    img {
+      max-width: 70%;
+      height: auto;
+      float: center;
+      border-radius: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main_key_facts {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .img_container {
+      display: grid;
+      place-items: center;
+      margin-top: 20px;
+
+      img {
+        margin: 0 auto;
+        height: auto;
+      }
+    }
+  }
+}
+
+.main_print_key{
+  display: none;
+}
+.main_print_text{
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  margin-right: 10px;
+}
+@media print {
+  .main_print_key{
+    display: block;
+    margin-top: 2rem;
+  }
+  .main_print_section{
+    display: none;
+  }
+  .main_key_facts {
+    // flex-direction: column;
+    align-items: flex-start;
+
+    .img_container {
+      display: grid;
+      place-items: center;
+      margin-top: 20px;
+
+      img {
+        margin: 0 auto;
+        height: auto;
+      }
+    }
+  }
+}
+
+.doughnut_charts_wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+
+  .chart_container {
+    position: relative;
+    // flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    .chart_label_passengers {
+      position: absolute;
+      top: 62%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #56ad70;
+      z-index: 10;
+      text-align: center;
+
+      .chart_label_description {
+        font-weight: 200;
+        font-size: 15px;
+        color: #8e8e8e;
+        text-align: center;
+      }
+    }
+
+    .chart_label_range {
+      position: absolute;
+      top: 62%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #dbe050;
+      text-align: center;
+      z-index: 10;
+
+      .chart_label_description {
+        font-weight: 200;
+        font-size: 15px;
+        text-align: center;
+        color: #8e8e8e;
+        text-align: center;
+      }
+    }
+
+    .chart_label_cruise {
+      position: absolute;
+      top: 62%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.4rem;
+      text-align: center;
+      font-weight: 600;
+      color: #da3978;
+      z-index: 10;
+
+      .chart_label_description {
+        font-weight: 200;
+        font-size: 15px;
+        color: #8e8e8e;
+        text-align: center;
+      }
+    }
+
+    .chart_label_cost {
+      position: absolute;
+      top: 62%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #90eb4b;
+      z-index: 10;
+
+      .chart_label_description {
+        font-weight: 200;
+        font-size: 15px;
+        color: #8e8e8e;
+        text-align: center;
+      }
+    }
+
+    .chart_label_fuel {
+      position: absolute;
+      text-align: center;
+      top: 62%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #d857f4;
+      z-index: 10;
+
+      .chart_label_description {
+        font-weight: 200;
+        font-size: 15px;
+        color: #8e8e8e;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media print {
+  .doughnut_charts_wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+
+    .chart_container {
+      // flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+  }
+}
+
+//  Performance Data
+
+.runaway_img {
+  padding-bottom: 40px;
+  max-width: 80%;
+}
+
+.additional_infos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  .info {
+    // flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+    font-size: smaller;
+    font-weight: 600;
+    gap: 10px;
+  }
+
+  .bars {
+    justify-content: flex-start;
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .distance_bar {
+      background-color: #7aa4da;
+      height: 25px;
+      transition: width 1s ease-in-out;
+      text-align: end;
+      color: beige;
+      padding-right: 10px;
+      padding-top: 3px;
+      position: relative;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+        border-top: 14px solid transparent;
+        border-bottom: 14px solid transparent;
+        border-left: 14px solid rgb(255, 255, 255);
+      }
+    }
+
+    .landing_distance_bar {
+      background-color: #92c176;
+      height: 25px;
+      padding-top: 3px;
+      transition: width 1s ease-in-out;
+      text-align: end;
+      color: beige;
+      padding-right: 10px;
+      position: relative;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+        border-top: 14px solid transparent;
+        border-bottom: 14px solid transparent;
+        border-left: 14px solid rgb(255, 255, 255);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .additional_infos {
+    .info {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .bars {
+      overflow: auto;
+
+      .distance_bar {
+        background-color: transparent;
+        color: black;
+        max-width: fit-content;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translate(0, -50%);
+          border: none;
+        }
+      }
+
+      .landing_distance_bar {
+        background-color: transparent;
+        color: black;
+        max-width: fit-content;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translate(0, -50%);
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+// pdf view for performance 
+@media print {
+
+  .distance_bar,
+  .landing_distance_bar {
+    background-color: transparent;
+    print-color-adjust: exact;
+  }
+}
+
+
+// Ownership costs
+
+.pie_charts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h3,
+  h4 {
+    text-align: center;
+  }
+}
+
+.ownership_main {
+  .form {
+    .search {
+      input {
+        max-width: 120px;
+        height: 30px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-shadow: 0px 0px 2px 0px rgba(99, 99, 99, 0.75);
+        padding: 0 5px;
+        outline: none;
+
+        &:focus {
+          border: 1px solid rgb(139, 139, 139);
+        }
+      }
+    }
+  }
+
+  input {
+    max-width: 120px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0px 0px 2px 0px rgba(99, 99, 99, 0.75);
+    padding: 0 5px;
+    outline: none;
+
+    &:focus {
+      border: 1px solid rgb(139, 139, 139);
+    }
+}
+
+
+  .f_v_costs {
+    .costs_container {
+      .costs {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .keys_values_container {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          .key_value_bar {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .key_value {
+              flex: 1;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              gap: 10px;
+              white-space: nowrap;
+            }
+
+            .bar {
+              flex: 2;
+              background-color: rgb(230, 228, 229);
+              height: 15px;
+              transition: width 1s ease-in-out;
+              text-align: end;
+              color: beige;
+              padding-right: 10px;
+              position: relative;
+              border-radius: 15px;
+
+              .bar__fill1 {
+                background-color: rgba(255, 99, 132, 1);
+                height: 15px;
+                transition: width 1s ease-in-out;
+                text-align: end;
+                color: beige;
+                padding-right: 10px;
+                position: relative;
+                border-radius: 15px;
+              }
+
+              .bar__fill2 {
+                background-color: rgba(54, 162, 235, 1);
+                height: 15px;
+                transition: width 1s ease-in-out;
+                text-align: end;
+                color: beige;
+                padding-right: 10px;
+                position: relative;
+                border-radius: 15px;
+              }
+
+              .bar__fill3 {
+                background-color: rgba(255, 206, 86, 1);
+                height: 15px;
+                transition: width 1s ease-in-out;
+                text-align: end;
+                color: beige;
+                padding-right: 10px;
+                position: relative;
+                border-radius: 15px;
+              }
+
+              .bar__fill4 {
+                background-color: rgba(75, 192, 192, 1);
+                height: 15px;
+                transition: width 1s ease-in-out;
+                text-align: end;
+                color: beige;
+                padding-right: 10px;
+                position: relative;
+                border-radius: 15px;
+              }
+
+              .bar__fill5 {
+                background-color: rgba(75, 192, 192, 1);
+                height: 15px;
+                transition: width 1s ease-in-out;
+                text-align: end;
+                color: beige;
+                padding-right: 10px;
+                position: relative;
+                border-radius: 15px;
+              }
+
+              .bar__fill6 {
+                background-color: rgba(153, 102, 255, 1);
+                height: 15px;
+                transition: width 1s ease-in-out;
+                text-align: end;
+                color: beige;
+                padding-right: 10px;
+                position: relative;
+                border-radius: 15px;
+              }
+
+              .bar__fill8 {
+                background-color: rgb(199, 55, 158);
+                height: 15px;
+                transition: width 1s ease-in-out;
+                text-align: end;
+                color: beige;
+                padding-right: 10px;
+                position: relative;
+                border-radius: 15px;
+              }
+
+              .bar__fill7 {
+                background-color: rgba(255, 159, 64, 1);
+                height: 15px;
+                transition: width 1s ease-in-out;
+                text-align: end;
+                color: beige;
+                padding-right: 10px;
+                position: relative;
+                border-radius: 15px;
+              }
+            }
+          }
+        }
+
+        .bars {
+          flex-grow: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 18px;
+        }
+      }
+    }
+  }
+}
+
+// pdf view for ownership cost
+@media print {
+  .bar {
+    background-color: rgb(230, 228, 229) s;
+    print-color-adjust: exact;
+  }
+}
+
+.cost {
+  color: #468746;
+  font-weight: bolder;
+  text-align: center;
+}
+
+// aquisition Costs
+
+.main_aquisiton {
+  .table_container {
+    overflow: auto;
+  }
+}
+
+.sorting {
+  position: absolute;
+  right: 0;
+
+  input {
+    max-width: 120px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0px 0px 2px 0px rgba(99, 99, 99, 0.75);
+    padding: 0 5px;
+    outline: none;
+
+    &:focus {
+      border: 1px solid rgb(139, 139, 139);
+    }
+  }
+
+  .dropdown {
+    .dropdown {
+      .head {
+        display: none;
+      }
+    }
+  }
+}
+
+.chart_dates {
+  width: 50%;
+  margin-bottom: 15px;
+  text-align: center;
+  margin-left: 25%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.single_select {
+  flex: 1 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 15px;
+  width: 30%;
+}
+
+.os_header {
+
+  h1,
+  h2,
+  h3 {
+    text-align: center;
+  }
+}
+
+// Range Map
+
+.main_range_map {
+  .range_configs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+
+    .map_inputs {
+      display: flex;
+      gap: 10px;
+      flex-direction: column;
+      align-items: center;
+
+      .pax_slider {
+        width: 170px;
+        align-items: start !important;
+        text-align: left !important;
+      }
+
+      label {
+        display: grid;
+        place-items: center;
+        max-width: 200px;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .pie_charts {
+    flex-direction: column;
+
+    .pie_chart__header {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+// similar Aircraft
+
+.similar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  .suggestion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    .image_container {
+      position: relative;
+
+      img {
+        object-fit: cover;
+        width: 170px;
+        height: auto;
+        border-radius: 15px;
+      }
+
+      img {
+        flex: 1;
+        max-width: 100%;
+        height: 100px;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .similar {
+    flex-direction: column;
+  }
+}
+
+// Accident data
+
+.main_accidentData {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  overflow: auto;
+
+  .total_aircraft {
+    font-size: 0.8rem;
+    background-color: gray;
+    color: beige;
+    padding: 5px;
+  }
+}
+
+// historical Fact
+.plot_btn_container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+
+  button {
+    outline: none;
+    border: none;
+    background-color: #d9d9d9;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-bottom: 1rem;
+
+    &:hover {
+      background-color: #c4c4c4;
+    }
+  }
+}
+
+// fleet flight hours
+
+.ffh_frame {
+  width: 100%;
+  min-height: 1400px;
+}
+
+@media screen and (max-width: 768px) {
+  .aircraft_table {
+    .aircraft_table_head {
+      display: none;
+    }
+
+    .aircraft_table_row {
+      .aircraft_table_row_elm {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .toggle_btn {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+// Maintenance
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: rgb(168, 168, 168);
+  border-radius: 100px;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: rgb(168, 168, 168);
+  border: 4px solid rgb(168, 168, 168);
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid rgb(178, 79, 79);
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent rgb(232, 232, 232);
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid rgb(178, 79, 79);
+  border-width: 10px 10px 10px 0;
+  border-color: transparent transparent transparent rgb(188, 65, 65);
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+
+  /* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+  /* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after,
+  .right::after {
+    left: 15px;
+  }
+
+  /* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+
+// remove timeline styles on print
+@media print {
+  .timeline {
+    .container {
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    .left {
+      left: 0;
+
+      &::after {
+        display: none;
+      }
+
+      &::before {
+        display: none;
+      }
+    }
+
+    .right {
+      left: 0;
+
+      &::after {
+        display: none;
+      }
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+@media print{
+  .fixed_span_medium{
+    width: 150px;
+  }
+}
+
+.reset_button {
+  margin-top:30px;
+  background-color: #fff;
+  border: 2px solid #e1e1e1;
+  border-radius: 10px;
+  color: #23262f;
+  outline: none;  
+  padding: 10px 15px 10px 15px;
+}
+
+.reset_button:hover {
+  background-color: #f7f7f7;
+  cursor: pointer;
+  border: 2px solid #787E8E;
+}

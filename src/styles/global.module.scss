@@ -1,0 +1,120 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.map-container {
+    width: 100%;
+    height: 400px;
+    z-index: 1;
+}
+
+.map-div {
+    height: 300px;
+}
+
+
+// colors
+:root {
+    --white: #ffffff;
+    --blue: #4437ff;
+    --blue-light: #4bc9f0;
+    --blue-dark: #1a10b1;
+    --purple: #9757d7;
+    --purple-light: #cdb4db;
+    --pink: #ef466f;
+    --green: #45b26b;
+    --asphalt: #e4d7cf;
+    --yellow: #ffd166;
+    --neutrals1: #141416;
+    --neutrals2: #23262f;
+    --neutrals3: #353945;
+    --neutrals4: #777e90;
+    --neutrals5: #b1b5c3;
+    --neutrals6: #e6e8ec;
+    --neutrals7: #f4f5f6;
+    --neutrals8: #fcfcfd;
+}
+
+.section-pt80 {
+    padding-top: 80px;
+}
+
+
+
+[class^='button'] {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    padding: 0 24px;
+    background: var(--blue);
+    border-radius: 24px;
+    text-align: center;
+    color: var(--neutrals8);
+    transition: all 0.2s;
+
+    &:hover {
+        background: var(--blue);
+    }
+
+    &.disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &.done {
+        background: var(--neutrals5);
+    }
+
+    &.loading {
+        background: var(--blue);
+        font-size: 0;
+    }
+
+    &.error {
+        box-shadow: 0 0 0 2px var(--neutrals6) inset;
+        background: none;
+        color: var(--pink);
+    }
+
+    svg {
+        fill: var(--neutrals8);
+    }
+
+    &:not([class^='button-circle']) {
+        svg {
+            &:first-child {
+                margin-right: 15px;
+            }
+
+            &:last-child {
+                margin-left: 15px;
+            }
+        }
+    }
+}
+
+.button-circle-stroke.button-small {
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+}
